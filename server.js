@@ -7,7 +7,7 @@ const { MongoClient } = require("mongodb");
 const ObjectId = require('mongodb').ObjectId; 
 
 const uri =
-  "mongodb+srv://haykanush_admin:hatHat2001@cluster0.bvioe.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  "mongodb+srv://haykanush_admin:wawe52521@cluster0.bvioe.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 const client = new MongoClient(uri);
 
