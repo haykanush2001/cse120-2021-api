@@ -324,10 +324,7 @@ function loadExistingData() {
         } else {
           myBookData.push(elem);
         }
-      } else if (elem["fullname"] && elem["fullname"].trim() == "Haykanush Papoyan")
-        {
-          myGenericData.push(elem); 
-        } else {
+      } else {
           otherData.push(elem);
         }
       })
