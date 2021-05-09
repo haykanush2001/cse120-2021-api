@@ -317,6 +317,7 @@ function loadExistingData() {
     dataType : "json",
     success : function(data) {
     console.log("success", data);
+    loadedData = data.data;
     data.data.forEach(elem => {
       if (elem["owner"] == "Haykanush Papoyan") {
         if (elem["project"] == "Singing") {
