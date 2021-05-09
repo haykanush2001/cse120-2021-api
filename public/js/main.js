@@ -231,7 +231,6 @@ function loadEditItem() {
   document.getElementById("title").value = editItem["title"];
   document.getElementById("fullname").value = editItem["fullName"];   
   document.getElementById("author").value = editItem["author"];   
-  document.getElementById("colour").value = editItem["colour"];
   document.getElementById("covertype").value = editItem["covertype"];
   document.getElementById("numberofpages").value = editItem["numberofpages"];
   document.getElementById("price").value = editItem["price"];
@@ -443,7 +442,6 @@ var myfavbook = {
   "project": "Book",
   "fullname": "",
   "author": "",
-  "colour": "",
   "covertype": "",
   "othercovervalue": "",
   "othercovertype": "",
@@ -470,9 +468,6 @@ function handleAuthorChange() {
   myfavbook.author= document.getElementById("author"). value;
 }
 
-function handleColourChange() {
-  myfavbook.colour= document.getElementById("colour"). value;
-}
 
 function handleCovertypechange(e){ 
   myfavbook.covertype=e.target.value;
