@@ -78,6 +78,31 @@ function validateFormData() {
   })
   return isFormValid;
 } 
+function showTheHobbyData(e){
+  e.preventDefault();
+  if(validateFormData() == false) {
+    return;
+  } else {
+    console.log(myhobby);
+    $.ajax({
+      type: 'POST',
+      url: "https://cse120-2021-api-haykanush.herokuapp.com/data",
+      data: myhobby,
+      cache: false,
+      dataType : 'json',
+      success: function (data) {
+        console.log("success");
+      },
+      error: function (xhr) {
+        console.error("Error in post", xhr);
+      },
+      complete: function () {
+        console.log("Complete");  
+      }
+    });
+  }
+}
+
 function updateHobby(){
   var tmp = {
    "id" : document.getElementById("_id").innerHTML,
