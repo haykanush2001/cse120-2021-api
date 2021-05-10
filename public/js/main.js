@@ -511,7 +511,7 @@ function showTheBookData(e){
     }
   });
 }
-function Book(){
+function updateBook(){
   var tmp = {
    "id" : document.getElementById("_id").innerHTML,
    "fullname" : document.getElementById("fullname").value,
