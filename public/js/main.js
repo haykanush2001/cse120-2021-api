@@ -77,15 +77,7 @@ function validateFormData() {
     }   
   })
   return isFormValid;
-}
-function showTheHobbyData(e){
-  e.preventDefault();
-  if(validateFormData() == false) {
-    return;
-  } else {
-    console.log(myhobby);
-   
-  
+} 
 function updateHobby(){
   var tmp = {
    "id" : document.getElementById("_id").innerHTML,
@@ -120,7 +112,7 @@ function updateHobby(){
             console.log("Complete");  
         }
     });
-
+}
 
 function displayData(existingData) {
   document.getElementById("existingData").innerHTML = "<ul>";
@@ -531,6 +523,6 @@ function updateBook(){
    "genre": document.getElementById("genre").value,
    "agerestriction": document.getElementById("agerestriction").value,
   
-   }}
+   }
 }
 
