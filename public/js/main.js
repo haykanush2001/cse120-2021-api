@@ -333,28 +333,22 @@ function saveData() {
 function loadExistingData() {
   mySingingData = [];
   myBookData = [];
-  otherData = [];
   $.ajax({
     type : "GET",
     url : "https://cse120-2021-api-haykanush.herokuapp.com/data",
     dataType : "json",
     success : function(data) {
+      loadedData = data.data;
     console.log("success", data);
-    loadedData = data.data;
     data.data.forEach(elem => {
-      if (elem["owner"] == "Haykanush Papoyan") {
         if (elem["project"] == "Singing") {
           mySingingData.push(elem);
         } else {
           myBookData.push(elem);
         }
-      } else {
-          otherData.push(elem);
-        }
       })
       displayData(mySingingData, "singingDataContainer");
       displayData(myBookData, "bookDataContainer");
-      displayData(otherData, "otherDataContainer");
     },
     error : function(data) {
       console.log("Error")
