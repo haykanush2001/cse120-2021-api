@@ -1,3 +1,6 @@
+var requiredFields = [
+  "fullname", "favsinger", "whyhersongs", "favsong", "singingway", "singaduet", "training", "oneword", "aspect"
+]
 var myhobby = {
   "owner": "Haykanush Papoyan",
   "project": "Singing",
@@ -105,7 +108,7 @@ function showTheHobbyData(e){
 
 function updateHobby(){
   var tmp = {
-   "_id" : document.getElementById("_id").innerHTML,
+   "id" : document.getElementById("_id").innerHTML,
    "fullname" : document.getElementById("fullname").value,
    "favsinger" : document.getElementById("favsinger").value,
    "whyhersongs" : document.getElementById("whyhersongs").value,
@@ -530,7 +533,7 @@ function showTheBookData(e){
 }
 function updateBook(){
   var tmp = {
-   "_id" : document.getElementById("_id").innerHTML,
+   "id" : document.getElementById("_id").innerHTML,
    "fullname" : document.getElementById("fullname").value,
    "title": document.getElementById("title").value,
    "author": document.getElementById("author").value,
