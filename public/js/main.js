@@ -536,7 +536,7 @@ function handleagerestrictionChange() {
 
 function showTheBookData(e){
   e.preventDefault();
-  console.log(myfavebook);
+  console.log(myfavbook);
   $.ajax({
     type: 'POST',
     url: "https://cse120-2021-api-haykanush.herokuapp.com/data",
