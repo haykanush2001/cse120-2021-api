@@ -532,5 +532,5 @@ function updateBook(){
    "agerestriction": document.getElementById("agerestriction").value,
   
    }}
-
+}
 
