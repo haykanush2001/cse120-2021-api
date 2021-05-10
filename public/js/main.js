@@ -331,8 +331,8 @@ function saveData() {
   });
 }
 function loadExistingData() {
-  mySingingData = [];
   myBookData = [];
+  mySingingData = [];
   $.ajax({
     type : "GET",
     url : "https://cse120-2021-api-haykanush.herokuapp.com/data",
@@ -341,14 +341,14 @@ function loadExistingData() {
       loadedData = data.data;
     console.log("success", data);
     data.data.forEach(elem => {
-        if (elem["project"] == "Singing") {
-          mySingingData.push(elem);
+        if (elem["project"] == "Book") {
+           myBookData.push(elem);
         } else {
-          myBookData.push(elem);
+          mySingingData.push(elem);
         }
       })
-      displayData(mySingingData, "singingDataContainer");
       displayData(myBookData, "bookDataContainer");
+      displayData(mySingingData, "singingDataContainer");
     },
     error : function(data) {
       console.log("Error")
