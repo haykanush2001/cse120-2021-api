@@ -105,7 +105,7 @@ function showTheHobbyData(e){
 
 function updateHobby(){
   var tmp = {
-   "id" : document.getElementById("_id").innerHTML,
+   "_id" : document.getElementById("_id").innerHTML,
    "fullname" : document.getElementById("fullname").value,
    "favsinger" : document.getElementById("favsinger").value,
    "whyhersongs" : document.getElementById("whyhersongs").value,
@@ -201,7 +201,7 @@ function loadEditItem() {
   console.log(editItem);
   document.getElementById("_id").innerHTML = editItem["_id"];
   document.getElementById("title").value = editItem["title"];
-  document.getElementById("fullname").value = editItem["fullName"];   
+  document.getElementById("fullname").value = editItem["fullname"];   
   document.getElementById("author").value = editItem["author"];   
   document.getElementById("covertype").value = editItem["covertype"];
   document.getElementById("numberofpages").value = editItem["numberofpages"];
