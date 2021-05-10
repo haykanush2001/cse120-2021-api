@@ -34,9 +34,6 @@ img {
 #bookDataContainer div.item {
   background-color: rgb(251, 231, 255);
 }
-#otherDataContainer div.item {
-  background-color: rgb(251, 231, 255);
-}
 div.item {
   min-width: 200px;
   width: 20%;
