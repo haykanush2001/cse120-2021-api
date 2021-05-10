@@ -409,14 +409,6 @@ function displayData(data, containerDivName) {
   })
 }
 
-function toggleOtherData() {
-  var otherData = document.getElementById("otherDataContainer");
-  if (otherData.style.display == "block") {
-    otherData.style.display = "none";
-  } else {
-    otherData.style.display = "block";
-  }
-}
 
 
 
