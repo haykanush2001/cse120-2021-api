@@ -306,7 +306,7 @@ function saveData() {
     });
 }
 function saveBookData() {
-  var myfavebook = {
+  var myfavbook = {
     "test": "Data"
   }
 
@@ -540,7 +540,7 @@ function showTheBookData(e){
   $.ajax({
     type: 'POST',
     url: "https://cse120-2021-api-haykanush.herokuapp.com/data",
-    data: myfavebook,
+    data: myfavbook,
     cache: false,
     dataType : 'json',
     success: function (data) {
