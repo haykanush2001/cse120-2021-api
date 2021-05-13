@@ -20,6 +20,9 @@ var myhobby = {
 function handleFullnameChange() {
   myhobby.fullname=document.getElementById ("fullname").value;
 }
+function handleTitleChange() {
+  myhobby.title=document.getElementById ("title").value;
+}
 function handleFavsingerChange() {
   myhobby.favsinger=document.getElementById ("favsinger").value;
 }
