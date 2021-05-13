@@ -451,7 +451,9 @@ function handleFullnameChange() {
 function handleAuthorChange() {
   myfavbook.author= document.getElementById("author"). value;
 }
-
+function handleColourChange() {
+  myfavbook.colour= document.getElementById("colour"). value;
+}
 
 function handleCovertypechange(e){ 
   myfavbook.covertype=e.target.value;
