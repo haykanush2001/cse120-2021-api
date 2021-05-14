@@ -524,24 +524,24 @@ function showTheBookData(e){
   });
 }
 function updateBook(){
-  var tmp = {
-   "_id" : document.getElementById("_id").innerHTML,
-   "fullname" : document.getElementById("fullname").value,
-   "title": document.getElementById("title").value,
-   "author": document.getElementById("author").value,
-   "covertype": document.getElementById("covertype").value,
-   "numberofpages": document.getElementById("numberofpages").value,
-   "price": document.getElementById("price").value,
-   "currency": document.getElementById("currency").value,
-   "language": document.getElementById("language").value,
-   "olanguage": document.getElementById("olanguage").value,
-   "edition": document.getElementById("edition").value,
-   "dimensions": document.getElementById("dimensions").value,
-   "publisher": document.getElementById("publisher").value,
-   "pdate": document.getElementById("pdate").value,
-   "origpdate": document.getElementById("origpdate").value,
-   "genre": document.getElementById("genre").value,
-   "agerestriction": document.getElementById("agerestriction").value,
+  var tmp = {};
+   tmp._id : document.getElementById("_id").innerHTML,
+   tmp.fullname : document.getElementById("fullname").value,
+   tmp.title : document.getElementById("title").value,
+   tmp.author : document.getElementById("author").value,
+   tmp.covertype : document.getElementById("covertype").value,
+   tmp.numberofpages : document.getElementById("numberofpages").value,
+   tmp.price : document.getElementById("price").value,
+   tmp.currency : document.getElementById("currency").value,
+   tmp.language : document.getElementById("language").value,
+   tmp.olanguage : document.getElementById("olanguage").value,
+   tmp.edition : document.getElementById("edition").value,
+   tmp.dimensions : document.getElementById("dimensions").value,
+   tmp.publisher : document.getElementById("publisher").value,
+   tmp.pdate : document.getElementById("pdate").value,
+   tmp.origpdate : document.getElementById("origpdate").value,
+   tmp.genre : document.getElementById("genre").value,
+   tmp.agerestriction : document.getElementById("agerestriction").value,
   
    }
 
