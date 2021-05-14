@@ -415,6 +415,9 @@ var myfavbook = {
 function handleFullnameChange() {
   myfavbook.fullname= document.getElementById("fullname"). value;
 }
+function handleTitleChange() {
+  myfavbook.title= document.getElementById("title"). value;
+}
 function handleAuthorChange() {
   myfavbook.author= document.getElementById("author"). value;
 }
