@@ -2,7 +2,7 @@ var requiredFields = [ "fullname", "favsinger", "whyhersongs", "singingstyle", "
 ]
 var myhobby = {
   "owner": "Haykanush Papoyan",
-  "project": "Singing",
+  "project": "My Hobby",
   "fullname" : "",
   "favsinger" : "",
   "whyhersongs" : "",
@@ -247,7 +247,7 @@ function editData(id) {
       console.log(item); 
       localStorage = window.localStorage;
       localStorage.setItem('editItem', JSON.stringify(item));
-      if (item.project == "Singing") {
+      if (item.project == "My Hobby") {
               document.location  = "hobby.html";
       } else {
               document.location  = "book.html"; 
