@@ -524,42 +524,43 @@ function showTheBookData(e){
   });
 }
 function updateBook(){
-  var tmp = {};
-   tmp._id = document.getElementById("_id").innerHTML;
-   tmp.fullname = document.getElementById("fullname").value;
-   tmp.title = document.getElementById("title").value;
-   tmp.author = document.getElementById("author").value;
-   tmp.covertype = document.getElementById("covertype").value;
-   tmp.numberofpages = document.getElementById("numberofpages").value;
-   tmp.price = document.getElementById("price").value;
-   tmp.currency = document.getElementById("currency").value;
-   tmp.language = document.getElementById("language").value;
-   tmp.olanguage = document.getElementById("olanguage").value;
-   tmp.edition = document.getElementById("edition").value;
-   tmp.dimensions = document.getElementById("dimensions").value;
-   tmp.publisher = document.getElementById("publisher").value;
-   tmp.pdate = document.getElementById("pdate").value;
-   tmp.origpdate = document.getElementById("origpdate").value;
-   tmp.genre = document.getElementById("genre").value;
-   tmp.agerestriction = document.getElementById("agerestriction").value;
-  
-
+  var UpdateBookData= {};
+  UpdateBookData.id=document.getElementById("_id").value;
+  UpdateBookData.fullname=document.getElementById("fullname").value;
+  UpdateBookData.title=document.getElementById("title").value;
+  UpdateBookData.author=document.getElementById("author").value;
+  UpdateBookData.covertype=document.getElementById("covertype").value;
+  UpdateBookData.numberofpages=document.getElementById("numberofpages").value;
+  UpdateBookData.price=document.getElementById("price").value;
+  UpdateBookData.currency=document.getElementById("currency").value;
+  UpdateBookData.language=document.getElementById("language").value;
+  UpdateBookData.olanguage=document.getElementById("olanguage").value;
+  UpdateBookData.edition=document.getElementById("edition").value;
+  UpdateBookData.dimensions=document.getElementById("dimensions").value;
+  UpdateBookData.publisher=document.getElementById("publisher").value;
+  UpdateBookData.pdate=document.getElementById("pdate").value;
+  UpdateBookData.origpdate=document.getElementById("origpdate").value;
+  UpdateBookData.genre=document.getElementById("genre").value;
+  UpdateBookData.agerestriction=document.getElementById("agerestriction").value;
+ 
+  e.preventDefault();
   $.ajax({
-        type: 'POST',
-        url: "https://cse120-2021-api-haykanush.herokuapp.com/data/update",
-        data: tmp,
-        cache: false,
-        dataType : 'json',
-        success: function (data) {
-          console.log("success");
-        },
-        error: function (xhr) {
-          console.error("Error in post", xhr);
-        },
-        complete: function () {
-          console.log("Complete");  
-        }
-      });
+    type: 'POST',
+    url: "https://cse120-2021-api-haykanush.herokuapp.com/data/update",
+    data: UpdateBookData,
+    cache: false,
+    dataType : 'json',
+    success: function (data) {
+      console.log("successfully editted");
+      window.location.href="https://cse120-2021-api-haykanush.herokuapp.com/admin.html";
+    },
+    error: function (xhr) {
+      console.error("Error in editting", xhr);
+    },
+    complete: function () {
+      console.log("Complete");  
+    }
+  });  
 }
 function saveBookData() {
   var myfavbook = {
