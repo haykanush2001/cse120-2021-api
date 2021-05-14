@@ -22,7 +22,7 @@ img{
 div.item {
   min-width: 200px;
   width: 20%;
-  height: 450px;
+  height: auto;
   background-color: #8d528d;
   float: left;
   margin: 10px;
