@@ -248,7 +248,7 @@ function editData(id) {
       localStorage = window.localStorage;
       localStorage.setItem('editItem', JSON.stringify(item));
       if (item.project == "My Hobby") {
-              document.location  = "hobby.html";
+      document.location  = "hobby.html";
       } else {
               document.location  = "book.html"; 
     }
@@ -303,12 +303,12 @@ function saveHobbyData() {
       },
       complete: function () {
         console.log("Complete");  
-      }
+       }
     });
 }
 
 function loadExistingData() {
-  myBookData = [];
+  BookData = [];
   SingingData = [];
     $.ajax({
       type : "GET",
@@ -319,12 +319,12 @@ function loadExistingData() {
       console.log("success", data);
       data.data.forEach(elem => {
           if (elem["project"] == "Book") {
-             myBookData.push(elem);
+             BookData.push(elem);
           } else {
             SingingData.push(elem);
           }
         })
-        displayData(myBookData, "bookDataContainer");
+        displayData(BookData, "bookDataContainer");
         displayData(SingingData, "singingDataContainer");
       },
        error : function(data) {
