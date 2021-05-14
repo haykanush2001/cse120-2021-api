@@ -19,9 +19,7 @@ var myhobby = {
 function handleFullnameChange() {
   myhobby.fullname=document.getElementById ("fullname").value;
 }
-function handleTitleChange() {
-  myhobby.title=document.getElementById ("title").value;
-}
+
 function handleFavsingerChange() {
   myhobby.favsinger=document.getElementById ("favsinger").value;
 }
@@ -310,8 +308,8 @@ function saveHobbyData() {
 }
 
 function loadExistingData() {
-  myBookData = [];
-  mySingingData = [];
+  BookData = [];
+  SingingData = [];
     $.ajax({
       type : "GET",
       url : "https://cse120-2021-api-haykanush.herokuapp.com/data",
@@ -321,9 +319,9 @@ function loadExistingData() {
       console.log("success", data);
       data.data.forEach(elem => {
           if (elem["project"] == "Book") {
-             myBookData.push(elem);
+             BookData.push(elem);
           } else {
-            mySingingData.push(elem);
+            SingingData.push(elem);
           }
         })
         displayData(myBookData, "bookDataContainer");
