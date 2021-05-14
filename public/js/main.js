@@ -106,7 +106,7 @@ function showTheHobbyData(e){
 }
 
 function updateHobby(){
-  var tmp = {
+  var myhobby = {
    "_id" : document.getElementById("_id").innerHTML,
    "fname" : document.getElementById("fname").value,
    "favsinger" : document.getElementById("favsinger").value,
