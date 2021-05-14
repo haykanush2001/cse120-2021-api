@@ -22,7 +22,7 @@ app.use(function (req, res, next) {
     res.header('Pragma', 'no-cache');
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods',
-                  'GET, POST, DELETE, OPTIONS');
+                  'GET, POST, UPDATE,DELETE, OPTIONS');
     res.setHeader('Access-Control-Max-Age', '30000');
     res.setHeader('Access-Control-Allow-Headers',
                   'Content-Type, Authorization, X-Requested-With');
@@ -82,10 +82,11 @@ app.post('/data/update', function (req, res) {
   client.connect()
   .then(client => {
     let id = req.body.id;
+    console.log(req);
     const query = { "_id": ObjectId(id)};
     client.db('cse120-2021-db').collection('books').updateOne(query, {$set: req.body})
       .then(result => {
-        res.send({"status":"Updated"});
+        res.send({"status":"Updated", "data":req, "res":res});
       })
       .catch(error => console.error(error))
   })

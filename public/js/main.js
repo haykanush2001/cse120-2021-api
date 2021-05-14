@@ -71,7 +71,6 @@ function handleAspectChange() {
 function validateFormData() {
   var isFormValid = true;
   var keys = Object.keys(myhobby);
-  console.log(myhobby);
   keys.forEach(key => {
       if (requiredFields.indexOf(key) > -1 && myhobby[key] == "") { console.log(key, " is a required field, please add a value") 
       if(document.getElementById(key)) {
@@ -87,7 +86,6 @@ function showTheHobbyData(e){
   if(validateFormData() == false) {
     return;
   } else {
-    console.log(myhobby);
     $.ajax({
       type: 'POST',
       url: "https://cse120-2021-api-haykanush.herokuapp.com/data",
