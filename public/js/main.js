@@ -224,18 +224,18 @@ function loadHobbyEditItem() {
   localStorage = window.localStorage;
   editItem = JSON.parse(localStorage.getItem("editItem"));
   console.log(editItem);
-  document.getElementById("_id").innerHTML = editItem["_id"];
-  document.getElementById("fullname").value = editItem["fullname"];
-  document.getElementById("favsinger").value = editItem["favsinger"];   
-  document.getElementById("whyhersongs").value = editItem["whyhersongs"];   
-  document.getElementById("singingstyle").value = editItem["singingstyle"];
-  document.getElementById("favsong").value = editItem["favsong"];
-  document.getElementById("singingway").value = editItem["singingway"];
-  document.getElementById("singaduet").value = editItem["singaduet"];
-  document.getElementById("training").value = editItem["training"];
-  document.getElementById("audience").value = editItem["audience"];
-  document.getElementById("oneword").value = editItem["oneword"];
-  document.getElementById("aspect").value = editItem["aspect"];
+  document.getElementById("_id").innerHTML = editItem._id;
+  document.getElementById("fname").value = editItem.fname;
+  document.getElementById("favsinger").value = editItem.favsinger;   
+  document.getElementById("whyhersongs").value = editItem.whyhersongs;   
+  document.getElementById("singingstyle").value = editItem.singingstyle;
+  document.getElementById("favsong").value = editItem.favsong;
+  document.getElementById("singingway").value = editItem.singingway;
+  document.getElementById("singaduet").value = editItem.singaduet;
+  document.getElementById("training").value = editItem.training;
+  document.getElementById("audience").value = editItem.audience;
+  document.getElementById("oneword").value = editItem.oneword;
+  document.getElementById("aspect").value = editItem.aspect;
   
 } 
 
