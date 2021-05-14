@@ -82,15 +82,18 @@ app.post('/data/update', function (req, res) {
   client.connect()
   .then(client => {
     let id = req.body.id;
-    const query = {"_id": ObjectId(id)};
+    const query = { "_id": ObjectId(id)};
+   // let update = {$set: {newValue}};
     client.db('cse120-2021-db').collection('books').updateOne(query, {$set: req.body})
       .then(result => {
-        res.send({"status":"Updated"});
+        console.log(result)
+        res.send({"message":"Editted"});
       })
       .catch(error => console.error(error))
   })
   .catch(console.error)
 })
+
 
 app.listen(port, function () {
     console.log('Example app listening on port 3001!')
