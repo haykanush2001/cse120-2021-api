@@ -325,7 +325,7 @@ function loadExistingData() {
           }
         })
         displayData(myBookData, "bookDataContainer");
-        displayData(mySingingData, "singingDataContainer");
+        displayData(SingingData, "singingDataContainer");
       },
        error : function(data) {
         console.log("Error")
