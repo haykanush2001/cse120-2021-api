@@ -352,11 +352,12 @@ function loadExistingData() {
       displayData(myBookData, "bookDataContainer");
       displayData(mySingingData, "singingDataContainer");
     },
-    error : function(data) {
+     error : function(data) {
       console.log("Error")
-    }
+     }
   });
 }
+
 function displayData(data, containerDivName) {
   document.getElementById(containerDivName).innerHTML = "";
   data.forEach(elem => {
