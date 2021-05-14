@@ -1,9 +1,9 @@
-var requiredFields = [ "fullname", "favsinger", "whyhersongs", "singingstyle", "favsong", "singingway", "singaduet", "training", "oneword", "aspect"
+var requiredFields = [ "fname", "favsinger", "whyhersongs", "singingstyle", "favsong", "singingway", "singaduet", "training", "oneword", "aspect"
 ]
 var myhobby = {
   "owner": "Haykanush Papoyan",
   "project": "My Hobby",
-  "fullname" : "",
+  "fname" : "",
   "favsinger" : "",
   "whyhersongs" : "",
   "singingstyle" : "",
@@ -16,8 +16,8 @@ var myhobby = {
   "othersingingway" : "",
   "audience" : "",
 }
-function handleFullnameChange() {
-  myhobby.fullname=document.getElementById ("fullname").value;
+function handleFnameChange() {
+  myhobby.fname=document.getElementById ("fname").value;
 }
 
 function handleFavsingerChange() {
@@ -71,6 +71,7 @@ function handleAspectChange() {
 function validateFormData() {
   var isFormValid = true;
   var keys = Object.keys(myhobby);
+  console.log(myhobby);
   keys.forEach(key => {
       if (requiredFields.indexOf(key) > -1 && myhobby[key] == "") { console.log(key, " is a required field, please add a value") 
       if(document.getElementById(key)) {
