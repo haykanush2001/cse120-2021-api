@@ -1,4 +1,4 @@
-var requiredFields = [ "fullname", "favsinger", "whyhersongs", "singingstyle", "favsong", "singingway", "singaduet", "training", "audience", "oneword", "aspect"
+var requiredFields = [ "fullname", "favsinger", "whyhersongs", "singingstyle", "favsong", "singingway", "singaduet", "training", "oneword", "aspect"
 ]
 var myhobby = {
   "owner": "Haykanush Papoyan",
