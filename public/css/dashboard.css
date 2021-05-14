@@ -16,13 +16,13 @@ img{
   position:absolute;
   top: 110px;
   left: 630px;
-  width:450px;
+  width:auto;
   height:100px;
 }
 div.item {
   min-width: 200px;
   width: 20%;
-  height: auto;
+  height: 450px;
   background-color: #8d528d;
   float: left;
   margin: 10px;
