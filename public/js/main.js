@@ -308,7 +308,7 @@ function saveHobbyData() {
 }
 
 function loadExistingData() {
-  BookData = [];
+  myBookData = [];
   SingingData = [];
     $.ajax({
       type : "GET",
