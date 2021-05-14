@@ -312,27 +312,27 @@ function saveHobbyData() {
 function loadExistingData() {
   myBookData = [];
   mySingingData = [];
-  $.ajax({
-    type : "GET",
-    url : "https://cse120-2021-api-haykanush.herokuapp.com/data",
-    dataType : "json",
-    success : function(data) {
-      loadedData = data.data;
-    console.log("success", data);
-    data.data.forEach(elem => {
-        if (elem["project"] == "Book") {
-           myBookData.push(elem);
-        } else {
-          mySingingData.push(elem);
-        }
-      })
-      displayData(myBookData, "bookDataContainer");
-      displayData(mySingingData, "singingDataContainer");
-    },
-     error : function(data) {
-      console.log("Error")
-     }
-  });
+    $.ajax({
+      type : "GET",
+      url : "https://cse120-2021-api-haykanush.herokuapp.com/data",
+      dataType : "json",
+      success : function(data) {
+        loadedData = data.data;
+      console.log("success", data);
+      data.data.forEach(elem => {
+          if (elem["project"] == "Book") {
+             myBookData.push(elem);
+          } else {
+            mySingingData.push(elem);
+          }
+        })
+        displayData(myBookData, "bookDataContainer");
+        displayData(mySingingData, "singingDataContainer");
+      },
+       error : function(data) {
+        console.log("Error")
+       }
+    });
 }
 
 function displayData(data, containerDivName) {
